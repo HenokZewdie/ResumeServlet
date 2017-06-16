@@ -1,0 +1,27 @@
+create database ResumeServlet;
+use ResumeServlet;
+CREATE TABLE `ResumeServlet`.`Person` (
+  `PersonID` INT NOT NULL AUTO_INCREMENT,
+  `FullName` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`PersonID`));
+  CREATE TABLE `ResumeServlet`.`Education` (
+  `EducationID` INT NOT NULL AUTO_INCREMENT,
+  `University` VARCHAR(45) NOT NULL,
+  `Major` VARCHAR(45) NOT NULL,
+  `Year` VARCHAR(45) NOT NULL,
+  `PersonID` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`EducationID`));
+  CREATE TABLE `ResumeServlet`.`Experiance` (
+  `ExperianceID` INT NOT NULL AUTO_INCREMENT,
+  `Company` VARCHAR(45) NOT NULL,
+  `Position` VARCHAR(45) NOT NULL,
+  `ExpYear` VARCHAR(45) NOT NULL,
+  `PersonID` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ExperianceID`));
+  CREATE TABLE `ResumeServlet`.`Skill` (
+  `SkillID` INT NOT NULL AUTO_INCREMENT,
+  `SkillName` VARCHAR(45) NOT NULL,
+  `Rating` VARCHAR(45) NOT NULL,
+  `PersonID` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`SkillID`));
